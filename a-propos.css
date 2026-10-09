@@ -1,0 +1,140 @@
+/* ========== PAGE À PROPOS : styles propres à cette page ========== */
+/* À charger APRÈS style.css. Couleurs du logo : vert #3d5d38, miel #e3a72f. */
+/* Les blocs .page-titre sont identiques à contact.css : si tu gardes les deux fichiers,
+   tu peux déplacer .page-titre dans style.css pour ne pas le répéter. */
+
+.page-titre {
+  padding: 3rem 0 1.5rem;
+  text-align: center;
+}
+
+.page-titre__titre {
+  font-family: "Lora", serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: #3d5d38;
+  margin: 0.25rem 0 0.75rem;
+}
+
+.page-titre__intro {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+/* ----- Histoire ----- */
+.histoire {
+  padding: 2rem 0 3rem;
+}
+
+.histoire__grille {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .histoire__grille {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.histoire__image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* ----- Chiffres ----- */
+.chiffres {
+  background: #3d5d38;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+.chiffres__liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .chiffres__liste {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.chiffres__nombre {
+  display: block;
+  font-family: "Lora", serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #e3a72f;
+  line-height: 1.1;
+}
+
+.chiffres__legende {
+  display: block;
+  margin-top: 0.25rem;
+}
+
+/* ----- Savoir-faire ----- */
+.savoir-faire {
+  padding: 3rem 0;
+}
+
+.savoir-faire__intro {
+  margin-bottom: 1.5rem;
+}
+
+.savoir-faire__grille {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 700px) {
+  .savoir-faire__grille {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ----- Engagements ----- */
+.valeurs {
+  background: #f6efdc;
+  padding: 3rem 0;
+}
+
+.valeurs__liste {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 700px) {
+  .valeurs__liste {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.valeurs__item {
+  background: #fff;
+  border-top: 5px solid #e3a72f;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+.valeurs__titre {
+  font-family: "Lora", serif;
+  color: #3d5d38;
+  margin-top: 0;
+}

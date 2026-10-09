@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact et commande : Thimdrine</title>
+  <meta name="description" content="Envoyez votre demande de commande à la coopérative Thimdrine : miel de thym, huile d'olive, confiture de figue de barbarie. Réponse sous 48 heures.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+  <!-- ========== EN-TÊTE ========== -->
+  <header class="entete">
+    <div class="conteneur entete__contenu">
+      <a class="logo" href="index.html" aria-label="Thimdrine, retour à l'accueil">
+        <svg class="logo__icone" viewBox="0 0 40 44" width="36" height="40" aria-hidden="true">
+          <polygon points="20,2 38,12 38,32 20,42 2,32 2,12" fill="none" stroke="#e3a72f" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M20 12v20M20 16c-4 0-6-2-6-5 4 0 6 2 6 5zm0 0c4 0 6-2 6-5-4 0-6 2-6 5zm0 6c-4 0-6-2-6-5 4 0 6 2 6 5zm0 0c4 0 6-2 6-5-4 0-6 2-6 5zm0 6c-4 0-6-2-6-5 4 0 6 2 6 5zm0 0c4 0 6-2 6-5-4 0-6 2-6 5z" fill="none" stroke="#3d5d38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="logo__nom">Thimdrine</span>
+      </a>
+
+      <nav class="navigation" aria-label="Navigation principale">
+        <ul class="navigation__liste">
+          <li><a class="navigation__lien" href="index.html">Accueil</a></li>
+          <li><a class="navigation__lien" href="produits.html">Nos produits</a></li>
+          <li><a class="navigation__lien" href="a-propos.html">À propos</a></li>
+          <li><a class="navigation__lien navigation__lien--actif" href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== TITRE DE LA PAGE ========== -->
+    <section class="page-titre">
+      <div class="conteneur">
+        <p class="surtitre">Passer commande</p>
+        <h1 class="page-titre__titre">Contactez la coopérative</h1>
+        <p class="page-titre__intro">Remplissez le formulaire ci-dessous : nous vous répondons sous 48 heures pour organiser la livraison ou le retrait à Nador.</p>
+      </div>
+    </section>
+
+    <!-- ========== FORMULAIRE ========== -->
+    <section class="commande">
+      <div class="conteneur commande__grille">
+
+        <form class="formulaire" action="mailto:contact@thimdrine.ma" method="post" enctype="text/plain">
+
+          <fieldset class="formulaire__groupe">
+            <legend class="formulaire__legende">Vos coordonnées</legend>
+
+            <div class="formulaire__ligne">
+              <div class="champ">
+                <label class="champ__label" for="nom">Nom <span class="champ__requis" aria-hidden="true">*</span></label>
+                <input class="champ__saisie" type="text" id="nom" name="nom" autocomplete="family-name" required>
+              </div>
+              <div class="champ">
+                <label class="champ__label" for="prenom">Prénom <span class="champ__requis" aria-hidden="true">*</span></label>
+                <input class="champ__saisie" type="text" id="prenom" name="prenom" autocomplete="given-name" required>
+              </div>
+            </div>
+
+            <div class="formulaire__ligne">
+              <div class="champ">
+                <label class="champ__label" for="telephone">Téléphone <span class="champ__requis" aria-hidden="true">*</span></label>
+                <input class="champ__saisie" type="tel" id="telephone" name="telephone" autocomplete="tel" inputmode="tel" placeholder="06 00 00 00 00" pattern="[0-9+\s]{9,16}" required>
+              </div>
+              <div class="champ">
+                <label class="champ__label" for="email">E-mail <span class="champ__requis" aria-hidden="true">*</span></label>
+                <input class="champ__saisie" type="email" id="email" name="email" autocomplete="email" placeholder="nom@exemple.com" required>
+              </div>
+            </div>
+
+            <div class="champ">
+              <label class="champ__label" for="ville">Ville <span class="champ__requis" aria-hidden="true">*</span></label>
+              <input class="champ__saisie" type="text" id="ville" name="ville" autocomplete="address-level2" required>
+            </div>
+          </fieldset>
+
+          <fieldset class="formulaire__groupe">
+            <legend class="formulaire__legende">Votre commande</legend>
+
+            <div class="formulaire__ligne">
+              <div class="champ">
+                <label class="champ__label" for="produit">Produit <span class="champ__requis" aria-hidden="true">*</span></label>
+                <select class="champ__saisie" id="produit" name="produit" required>
+                  <option value="" selected disabled>Choisir un produit</option>
+                  <option value="miel-thym">Miel de thym (180 DH, 500 g)</option>
+                  <option value="huile-olive">Huile d'olive extra vierge (90 DH, 1 L)</option>
+                  <option value="confiture-figue">Confiture de figue de barbarie (45 DH, 350 g)</option>
+                  <option value="Amlou-noix">Amlou de noix(120 DH,250 g)</option>
+                  <option value="beurre">beurre Beldi(45DH, 250g)</option>
+                  <option value="olives">Olives(25DH, 250g)</option>
+                  <!-- Ajoute ici les 3 autres produits de produits.html -->
+                </select>
+              </div>
+              <div class="champ champ--court">
+                <label class="champ__label" for="quantite">Quantité <span class="champ__requis" aria-hidden="true">*</span></label>
+                <input class="champ__saisie" type="number" id="quantite" name="quantite" min="1" max="50" value="1" required>
+              </div>
+            </div>
+
+            <div class="champ">
+              <label class="champ__label" for="message">Message <span class="champ__option">(facultatif)</span></label>
+              <textarea class="champ__saisie champ__saisie--zone" id="message" name="message" rows="4" placeholder="Livraison ou retrait, précisions, autres produits…"></textarea>
+            </div>
+          </fieldset>
+
+          <p class="formulaire__note"><span aria-hidden="true">*</span> Champs obligatoires</p>
+          <button class="bouton bouton--plein formulaire__bouton" type="submit">Envoyer ma demande</button>
+        </form>
+
+        <!-- ========== INFOS PRATIQUES ========== -->
+        <aside class="infos" aria-label="Informations pratiques">
+          <h2 class="infos__titre">Nous trouver</h2>
+          <address class="infos__adresse">
+            Route de Selouane, Nador, Maroc<br>
+            Tél. : <a href="tel:+212536000000">05 36 00 00 00</a><br>
+            E-mail : <a href="mailto:contact@thimdrine.ma">contact@thimdrine.ma</a>
+          </address>
+          <h3 class="infos__sous-titre">Horaires</h3>
+          <p>Du lundi au samedi<br>de 9 h à 18 h</p>
+          <p class="infos__delai">Réponse sous 48 heures.</p>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== PIED DE PAGE ========== -->
+  <footer class="pied">
+    <div class="conteneur pied__grille">
+      <div class="pied__bloc">
+        <h2 class="pied__titre">Coopérative Thimdrine</h2>
+        <address class="pied__adresse">
+          Route de Selouane, Nador, Maroc<br>
+          Tél. : <a href="tel:+212536000000">05 36 00 00 00</a><br>
+          E-mail : <a href="mailto:contact@thimdrine.ma">contact@thimdrine.ma</a>
+        </address>
+      </div>
+
+      <div class="pied__bloc">
+        <h2 class="pied__titre">Horaires</h2>
+        <p>Du lundi au samedi<br>de 9 h à 18 h</p>
+      </div>
+
+      <nav class="pied__bloc" aria-label="Plan du site">
+        <h2 class="pied__titre">Plan du site</h2>
+        <ul class="pied__liens">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="produits.html">Nos produits</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <p class="pied__copyright">© 2026 Coopérative Thimdrine · Site réalisé à YouCode Nador</p>
+  </footer>
+
+</body>
+</html>

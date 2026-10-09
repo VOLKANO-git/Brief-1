@@ -1,0 +1,166 @@
+/* ========== PAGE CONTACT : styles propres au formulaire ========== */
+/* À charger APRÈS style.css. Couleurs reprises du logo : vert #3d5d38, miel #e3a72f. */
+
+.page-titre {
+  padding: 3rem 0 1.5rem;
+  text-align: center;
+}
+
+.page-titre__titre {
+  font-family: "Lora", serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: #3d5d38;
+  margin: 0.25rem 0 0.75rem;
+}
+
+.page-titre__intro {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.commande {
+  padding: 1.5rem 0 4rem;
+}
+
+.commande__grille {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .commande__grille {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/* ----- Formulaire ----- */
+.formulaire {
+  background: #fff;
+  border: 1px solid #e6e0d2;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.formulaire__groupe {
+  border: 0;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.formulaire__legende {
+  font-family: "Lora", serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #3d5d38;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.formulaire__ligne {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .formulaire__ligne {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.champ {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.champ__label {
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.champ__requis {
+  color: #b3402a;
+}
+
+.champ__option {
+  font-weight: 400;
+  color: #6b6b6b;
+}
+
+.champ__saisie {
+  font: inherit;
+  padding: 0.7rem 0.85rem;
+  border: 2px solid #cfc8b6;
+  border-radius: 8px;
+  background: #fffdf8;
+  color: inherit;
+  width: 100%;
+}
+
+.champ__saisie--zone {
+  resize: vertical;
+  min-height: 7rem;
+}
+
+.champ__saisie:focus {
+  outline: 3px solid #e3a72f;
+  outline-offset: 1px;
+  border-color: #3d5d38;
+}
+
+.champ__saisie:user-invalid {
+  border-color: #b3402a;
+}
+
+.formulaire__note {
+  font-size: 0.9rem;
+  color: #6b6b6b;
+  margin: 0 0 1rem;
+}
+
+.formulaire__bouton {
+  width: 100%;
+  cursor: pointer;
+  border: 0;
+  font: inherit;
+  font-weight: 700;
+}
+
+@media (min-width: 600px) {
+  .formulaire__bouton {
+    width: auto;
+  }
+}
+
+/* ----- Infos pratiques ----- */
+.infos {
+  background: #f6efdc;
+  border-left: 5px solid #e3a72f;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.infos__titre {
+  font-family: "Lora", serif;
+  color: #3d5d38;
+  margin-top: 0;
+}
+
+.infos__adresse {
+  font-style: normal;
+  line-height: 1.7;
+}
+
+.infos__sous-titre {
+  font-family: "Lora", serif;
+  color: #3d5d38;
+  margin: 1.25rem 0 0.25rem;
+}
+
+.infos__delai {
+  font-weight: 600;
+  margin-bottom: 0;
+}
