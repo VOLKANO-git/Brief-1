@@ -1,7 +1,5 @@
 /* ========== PAGE À PROPOS : styles propres à cette page ========== */
-/* À charger APRÈS style.css. Couleurs du logo : vert #3d5d38, miel #e3a72f. */
-/* Les blocs .page-titre sont identiques à contact.css : si tu gardes les deux fichiers,
-   tu peux déplacer .page-titre dans style.css pour ne pas le répéter. */
+
 
 .page-titre {
   padding: 3rem 0 1.5rem;
